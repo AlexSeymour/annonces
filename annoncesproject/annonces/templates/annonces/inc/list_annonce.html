@@ -1,0 +1,20 @@
+{% for annonce in annonces.object_list %}
+{% with img=annonce.images.first.image %}
+
+
+<h2><a href="{% url 'annonce:detail' annonce.slug_title %}">{{annonce.title|truncatewords:50}}</a></h2>
+{% if annonce.user == request.user.profile %}
+<a href="{% url 'annonce:update' annonce.id %}"><button type="button" class="btn btn-primary">Modifier</button></a>
+{% endif %}
+
+
+{% if img %}
+
+<img src="{{img.url}}" style="width:100px;height:70px;">
+{% endif %}
+
+<p>{{annonce.text|truncatewords:100}}</p>
+
+{% endwith %}
+
+{% endfor %}

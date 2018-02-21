@@ -1,0 +1,12 @@
+{% extends "registration/base.html" %}
+
+{% block content %}
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+    <input type="submit" class="btn btn-primary btn-md">
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "annonces/base.html" %}
+
+{% block content %}
+<form action="" method="post">{% csrf_token %}
+    <p>êtes-vous sur de vouloir supprimer "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+{% endblock %}

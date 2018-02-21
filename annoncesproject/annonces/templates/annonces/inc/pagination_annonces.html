@@ -1,0 +1,10 @@
+{% if annonces.has_previous %}
+
+<a href="{% url 'annonce:list-page' annonces.previous_page_number %}">Page précédente</a>
+{% endif %}
+
+{% if annonces.has_next %}
+
+<a href="{% url 'annonce:list-page' annonces.next_page_number %}">Page suivante</a>
+
+{% endif %}

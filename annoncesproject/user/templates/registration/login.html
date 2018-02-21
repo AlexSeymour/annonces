@@ -1,0 +1,14 @@
+{% extends "registration/base.html" %}
+
+
+{% block content %}
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form}}
+
+    <input type="submit" name="confirm" class="btn btn-primary btn-md">
+</form>
+
+
+{% endblock %}

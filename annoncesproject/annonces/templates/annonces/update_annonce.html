@@ -1,0 +1,13 @@
+{% extends "annonces/base.html" %}
+
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">
+
+    {{ image_formset.management_form }}
+    {% csrf_token %}
+    {{ annonce_form }}
+    {{image_formset}}
+    <input type="submit" class="btn btn-primary" value="confirmer" />
+</form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "annonces/base.html" %}
+
+
+{% block content %}
+
+<a href="{% url 'annonce:list' %}">Retour aux annonces</a>
+
+
+
+<h2>{{annonce.title}}</h2>
+
+
+{% for image in images%}
+<img src="{{image.image.url}}" style="width:100px;height:70px;">
+{% endfor %}
+<p>{{annonce.text}}</p>
+
+{% endblock %}
