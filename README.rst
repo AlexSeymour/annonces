@@ -1,4 +1,4 @@
-# annonces
-*site de petites annonce Django (2015)
-*Mise à jour en Décembre 2016
-*Django 1.10
+Site de petites Annonces
+-------------------------
+* Site de petites annonces crée en 2015 sous python3 avec le framework Django
+* Mise à jour du site web (migration vers Django 1.10)
